@@ -41,11 +41,11 @@ RUN delgroup ping && \
     addgroup cnc_user docker && \
     mkdir /home/cnc_user/.pan_cnc && \
     chown cnc_user:cnc_group /home/cnc_user/.pan_cnc && \
-    chgrp cnc_group /app/cnc
-#    chgrp cnc_group /app/src/panhandler/snippets && \
-#    chmod g+w /app/cnc && \
-#    chmod g+w /app/src/panhandler/snippets && \
-#    chmod +x -R /app/cnc/tools
+    chgrp cnc_group /app/cnc %% \
+    chgrp cnc_group /app/src/panhandler/snippets && \
+    chmod g+w /app/cnc && \
+    chmod g+w /app/src/panhandler/snippets && \
+    chmod +x -R /app/cnc/tools
 
 #USER cnc_user
 EXPOSE 8080
