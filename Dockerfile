@@ -50,4 +50,4 @@ RUN delgroup ping && \
 #USER cnc_user
 EXPOSE 8080
 #CMD ["/app/cnc/tools/ph.sh"]
-CMD ["python3"]
+CMD exec /bin/sh -c "trap : TERM INT; (while true; do sleep 1000; done) & wait"
